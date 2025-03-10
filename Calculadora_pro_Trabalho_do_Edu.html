@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+
+    <script>
+
+        function calculateProdutoEscalarResult() {
+            console.log("RTRETW")
+
+            let aX = document.getElementById("aX").value;
+            let aY = document.getElementById("aY").value;
+            let aZ = document.getElementById("aZ").value;
+    
+            let bX = document.getElementById("bX").value;
+            let bY = document.getElementById("bY").value;
+            let bZ = document.getElementById("bZ").value;
+    
+            let result = aX*bX + aY*bY + aZ*bZ;
+            console.log(result)
+
+            alert("Resultado: "+result);
+
+        }
+
+        function calculateAnguloEntreVetores(){
+            console.log("Wokr")
+
+            let vetorProductScale = document.getElementById("PE-vetor").value;
+    
+            let magnitudeA = document.getElementById("M-vetorA").value;
+            let magnitudeB= document.getElementById("M-vetorB").value;
+    
+            let result = Math.acos((vetorProductScale) / (magnitudeA * magnitudeB))
+            console.log(result)
+
+            alert("Resultado: "+result);
+        }
+    
+        function calculateProdutoVetorialResult() {
+            console.log("RTRETW")
+
+            let aX = document.getElementById("PV-aX").value;
+            let aY = document.getElementById("PV-aY").value;
+            let aZ = document.getElementById("PV-aZ").value;
+    
+            let bX = document.getElementById("PV-bX").value;
+            let bY = document.getElementById("PV-bY").value;
+            let bZ = document.getElementById("PV-bZ").value;
+    
+            let result1 = aY*bZ - aZ*bY;
+            let result2 = aZ*bX - aX*bZ;
+            let result3 = aX*bY - aY*bX;
+
+            alert("Resultado a*b: "+ result1 + ", " + result2 + ", " + result3);
+
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <div>
+        <h1>Calculadora para os Trabalhos do Edu</h1>
+        <div>
+            <h2>Produto escalar</h2>
+            <p>
+                Equação: a·b = x1*x2 + y1*y2 + z1*z2<br>
+                a e b são vetores. <br> <br>
+
+                Vetor a<br>
+                <input id="aX" placeholder="Insira o valor x do vetor (a)"><br>
+                <input id="aY" placeholder="Insira o valor y do vetor (a)"><br>
+                <input id="aZ" placeholder="Insira o valor z do vetor (a)"><br><br>
+
+                Vetor b<br>
+                <input id="bX" placeholder="Insira o valor x do vetor (b)"><br>
+                <input id="bY" placeholder="Insira o valor y do vetor (b)"><br>
+                <input id="bZ" placeholder="Insira o valor z do vetor (b)"><br><br>
+
+                <button onclick="calculateProdutoEscalarResult()" >Calcule</button> <br><br>
+            </p>
+        </div>
+
+        <div>
+            <h2>Ângulo entre vetores</h2>
+            <p>
+                Com o produto escalar, calcule o ângulo entre os vetores da atividade 8 utilizando
+                a fórmula: Θ = cos-1((a ∙ b) / (||a|| ||b||)<br>
+                a e b são os vetores. <br> 
+                ||a|| e ||b|| são a magnitude. <br> <br>
+
+                Produto escalar<br>
+                <input id="PE-vetor" placeholder="Produto escalar dos vetores"><br><br>
+
+                Magnitude<br>
+                <input id="M-vetorA" placeholder="Magnitude do vetor (a)"><br>
+                <input id="M-vetorB" placeholder="Magnitude do vetor (b)"><br>
+
+                <button onclick="calculateAnguloEntreVetores()" >Calcule</button> <br><br>
+            </p>
+        </div>
+
+
+        <div>
+            <h2>Produto vetorial</h2>
+            <p>
+                Utilizando a fórmula a x b = <aybz-azby, azbx-axbz, axby-aybx> , 
+                    calcule o produto vetorial a x b dos vetores da atividade 8.<br>
+                a e b são os vetores. <br> 
+
+                Produto vetorial<br>
+                Vetor a<br>
+                <input id="PV-aX" placeholder="Insira o valor x do vetor (a)"><br>
+                <input id="PV-aY" placeholder="Insira o valor y do vetor (a)"><br>
+                <input id="PV-aZ" placeholder="Insira o valor z do vetor (a)"><br><br>
+
+                Vetor b<br>
+                <input id="PV-bX" placeholder="Insira o valor x do vetor (b)"><br>
+                <input id="PV-bY" placeholder="Insira o valor y do vetor (b)"><br>
+                <input id="PV-bZ" placeholder="Insira o valor z do vetor (b)"><br><br>
+
+
+                <button onclick="calculateProdutoVetorialResult()" >Calcule</button> <br><br>
+            </p>
+        </div>
+
+    </div>
+</body>
+
+</html>
